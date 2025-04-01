@@ -3,9 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {  useState } from 'react'
-import About from  './components/About';
+// import About from  './components/About';
 import Alert from './components/Alert';
-import{BrowserRouter as Router,Routes,Route,}from "react-router-dom";
+// import{BrowserRouter as Router,Routes,Route,}from "react-router-dom";
 
  
 function App() {
@@ -43,20 +43,20 @@ function App() {
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
   <Navbar title="TextUtils2" aboutText="About textutils"  mode={mode} toggleMode={toggleMode}/>           { /*using this u can change the title of navbar and about text and u can  pass more */}
     <Alert alert={alert}/>
     <div className="container my-3">
-    <Routes>
+    {/* <Routes> */}
 
-        <Route path="/about"  element={  <About />}/>
+        {/* <Route path="/about"  element={  <About />}/> */}
         
-        <Route exact path="/"  element={<TextForm showAlert={showAlert} heading="Enter text below"            mode={mode}/>}/>
+        <TextForm showAlert={showAlert} heading="Enter text below" mode={mode} />
        
-      </Routes>
+      {/* </Routes> */}
       
         </div>
-        </Router>
+        {/* </Router> */}
     </>
   );
 }
